@@ -1,18 +1,18 @@
 FROM kalilinux/kali-rolling:latest
 
-# update packages and install main requirements
-RUN apt-get update && apt-get install -y git iproute2 iw macchanger aircrack-ng mdk4 sed gawk xterm jq pciutils bsdmainutils curl procps john hashcat hcxtools hcxdumptool reaver pixiewps hostapd hostapd-wpe dnsmasq lighttpd bettercap python3
+# Update packages and install all requirements
+RUN apt-get update && apt-get install -y git gcc iproute2 iw macchanger aircrack-ng mdk4 sed gawk xterm jq pciutils usbutils ethtool bsdmainutils curl procps john hashcat hcxtools hcxdumptool reaver pixiewps hostapd hostapd-wpe dnsmasq lighttpd bettercap python3
 
-# set work directory
+# Set working directory
 WORKDIR /app
 
-# clone WEF repository
+# Clone WEF repository
 RUN git clone https://github.com/D3Ext/WEF
 
-# change working directory to repository path
+# Change working directory to repository path
 WORKDIR /app/WEF
 
-# execute the installer to install WEF
+# Execute WEF
 RUN bash wef
 
 

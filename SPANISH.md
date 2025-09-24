@@ -55,8 +55,8 @@ Si encuentras algún error, abre un issue en el repositorio (puedes escribirlo e
     - Ataque Caffe Latte
     - Ataque de falsa autenticación
 - Handshake:
-    - Captura de handshake WPA (sin deauth)
-    - Ataque PMKID (sin clientes)
+    - Ataque de handshake WPA
+    - Ataque de handshake PMKID
 - Rogue-AP:
     - EvilTwin:
         - Modo KARMA
@@ -70,9 +70,9 @@ Todos los ataques mencionados arriba están explicados [aquí](https://github.co
 
 ## Funciones
 
-Estas son algunas de las funciones mas destacadas:
+Estas son algunas de las funciones más destacadas:
 
-:ballot_box_with_check: Ataques WPA, WPS, WEP, Rogue-AP y de Handshake
+:ballot_box_with_check: Ataques WPA/WPA2/WPA3, WPS, WEP, Rogue-AP y de Handshake
 
 :ballot_box_with_check: Modo de ataque automático en función de las características del AP
 
@@ -88,6 +88,8 @@ Estas son algunas de las funciones mas destacadas:
 
 :ballot_box_with_check: Reportes informativos sobre los ataques en formato HTML
 
+:ballot_box_with_check: Script standalone
+
 :ballot_box_with_check: Inglés y español soportados
 
 ## Instalación
@@ -100,13 +102,6 @@ bash wef
 ```
 
 Echa un ojo a la [Wiki](https://github.com/D3Ext/WEF/wiki/Installation) donde hay más información sobre la instalación
-
-## Desinstalación
-
-```sh
-rm -rf /usr/share/wef \
-  /usr/bin/wef
-```
 
 ## Uso
 
@@ -122,11 +117,10 @@ wef -i wlan0
   \ \/\/ /| _|| _|
    \_/\_/ |___|_|
 
-[WEF] WiFi Exploitation Framework 1.5
+[WEF] WiFi Exploitation Framework 1.6
 
 Interfaces:
     wlan0
-    ens33
 
 Required parameters:
     -i, --interface)    The name of your network adapter interface in managed mode
@@ -158,22 +152,28 @@ Mira [aquí](https://github.com/D3Ext/WEF/wiki/Usage-&-Tips) para más informaci
 
 ## TODO
 
-- ~~Online handshake cracking (WPA-SEC)~~
-- ~~Ataque WPA3 con diccionario~~
-- ~~Modificar el dominio regulatorio para cambiar el txpower~~
-- ~~Mas idiomas añadidos a las plantillas del ataque Evil Twin~~
-- ~~Randomiza la direccion MAC automaticamente durante el inicio~~
-- ~~Mejoras generales y arreglos menores~~
-- ~~Errores solucionados~~
-- ~~Modo automatico de exploit~~
-- ~~Los escaneos de APs ahora muestran si WPS está activado~~
-- ~~Soporte para autocompletar las rutas de los archivos~~
-- ~~Mejor logging por pantalla~~
-- ~~Mejor redibilidad del codigo (codigo optimizado)~~
-- ~~Añadir logo a las plantillas del ataque EvilTwin automaticamente basado en el vendor~~
-- ~~Los vendors de las direcciones MAC han sido actualizados y optimizados~~
-- Comprobar la compatibilidad con otros OS
-- ~~Probar en profundidad las funcionalidades implementadas~~
+- Plantillas personalizadas de Evil Twin basadas en el vendor del AP (TP-Link, Netgear, etc)
+- Más idiomas aun para las plantillas de Evil Twin
+- Más ataques WPA3: Downgrade, Dragondrain
+- ~~Ordena los APs por el power para mostrar los APs más cercanos~~
+- ~~WEF ahora funciona como un script standalone~~
+- ~~Ahora la desasociación esta soportada junto a la deauthenticación~~
+- ~~Los vendors ya no se obtiene de un archivo local~~
+- ~~El escaneo de APs ha sido mejorado, ahora los APs con clientes se marcan en color verde~~
+- ~~Evil Twin ahora soporta handshakes PMKID para comprobar las contraseñas obtenidas~~
+- ~~La randomizacion/spoofing de la dirección MAC ha sido mejorada~~
+- ~~Filtros para WPS y WPA3 a la hora de escanear APs~~
+- ~~La mayoria de ataques han sido rehechos/mejorados, nuevas opciones disponibles~~
+- ~~Las sesiones gráficas y las ventanas han sido rediseñadas y mejoradas~~
+- ~~El uso de WEF sin sesión gráfica ha sido mejorado~~
+- ~~Instalación automatica de requisitos en las distros principales~~
+- ~~Pruebas en profundidad en las distros compatibles (Manjaro, Fedora, Parrot, Debian, etc)~~
+- ~~Los requisitos fueron actualizados. Se han añadido algunos requerimientos más aunque deberian estar instalados en la mayoria de distros~~
+- ~~Ataque WPA3 actualizado y rediseñado~~
+- ~~Más idiomas soportados en las plantillas de Evil Twin (checho, danés y rumano)~~
+- ~~Los diccionarios ya no son requeridos como dependencias~~
+- ~~Mejor manejo de los errores en la mayoria de casos~~
+- ~~Multiples errores arreglados~~
 
 ## Contribuir
 
@@ -182,10 +182,6 @@ Mira [CONTRIBUTING.md](https://github.com/D3Ext/WEF/blob/main/CONTRIBUTING.md)
 ## Changelog
 
 Mira [CHANGELOG.md](https://github.com/D3Ext/WEF/blob/main/CHANGELOG.md)
-
-## Creditos
-
-Gracias a [ultrazar](https://github.com/ultrazar) y a [ErKbModifier](https://github.com/ErKbModifier)
 
 ## Referencias
 

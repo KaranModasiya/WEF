@@ -44,7 +44,7 @@ If you find an error, please open an issue (you can write it in english or spani
 ## Supported attacks
 
 - DoS (optional handshake capture):
-    - Deauthentication attack
+    - Deauthentication/Disassociation attack
     - WIDS Confusion attack
     - Authentication attack
     - Beacon Flood attack
@@ -59,8 +59,8 @@ If you find an error, please open an issue (you can write it in english or spani
     - Caffe Latte attack
     - Fake Authentication attack
 - Handshake:
-    - WPA handshake capture (without deauth)
-    - PMKID attack (clientless)
+    - WPA handshake attack
+    - PMKID handshake attack
     - Pwnagotchi mode
 - Rogue AP:
     - Evil Twin attack
@@ -78,7 +78,7 @@ All the mentioned attacks/techniques are explained [here](https://github.com/D3E
 
 This are some of the most notable features:
 
-:ballot_box_with_check: WPA/WPA2, WPS, WEP, Rogue-AP, and Handshake Attacks
+:ballot_box_with_check: WPA/WPA2/WPA3, WPS, WEP, Rogue-AP, and Handshake Attacks
 
 :ballot_box_with_check: Automatic attack mode based on the features of the AP
 
@@ -86,13 +86,15 @@ This are some of the most notable features:
 
 :ballot_box_with_check: Online and offline handshake cracking
 
-:ballot_box_with_check: Simple login template for Evil Twin attack (different languages)
+:ballot_box_with_check: Simple login template for Evil Twin attack (multiple languages supported)
 
 :ballot_box_with_check: Enable/disable monitor mode and view information about the network interface (frequencies, chipset, MAC...)
 
 :ballot_box_with_check: 2.4 GHz and 5 GHz supported
 
 :ballot_box_with_check: Informative reports using HTML templates
+
+:ballot_box_with_check: Standalone script
 
 :ballot_box_with_check: English and spanish supported
 
@@ -105,16 +107,7 @@ cd WEF
 bash wef
 ```
 
-Take a look at the [Wiki](https://github.com/D3Ext/WEF/wiki/Installation) where I have more info about the installation
-
-## Uninstallation
-
-Simply execute this:
-
-```sh
-rm -rf /usr/share/wef \
-  /usr/bin/wef
-```
+Take a look at the [Wiki](https://github.com/D3Ext/WEF/wiki/Installation) where I have more info about the tool
 
 ## Usage
 
@@ -130,11 +123,10 @@ wef -i wlan0
   \ \/\/ /| _|| _|
    \_/\_/ |___|_|
 
-[WEF] WiFi Exploitation Framework 1.5
+[WEF] WiFi Exploitation Framework 1.6
 
 [*] Interfaces:
     wlan0
-    ens33
 
 Required parameters:
     -i, --interface)    The name of your network adapter interface in managed mode
@@ -166,35 +158,33 @@ See [here](https://github.com/D3Ext/WEF/wiki/Usage-&-Tips) for more information 
 
 ## TODO
 
-- ~~Online cracking (WPA-SEC)~~
-- ~~WPA3 dictionary attack~~
-- ~~Enhanced reports using HTML~~
-- ~~Modify regulatory domain to change txpower~~
-- ~~More languages added as Evil Twin templates~~
-- ~~Randomize MAC address automatically during launch~~
-- ~~General improvement and minor fixes~~
-- ~~Bugs fixed~~
-- ~~Auto-exploit mode~~
-- ~~APs scan now shows if WPS is enabled without wash~~
-- ~~Path autocompletion supported~~
-- ~~Better output logging~~
-- ~~Better code readability (code optimized)~~
-- ~~Add vendor logo to Evil Twin templates on the fly~~
-- ~~MAC vendors have been updated and optimized using official OUI list~~
-- Test compatibility with others OS
-- ~~In-depth testing of implemented features~~
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/D3Ext/WEF/blob/main/CONTRIBUTING.md)
+- Custom Evil Twin templates based on target AP vendor (TP-Link, Netgear, etc)
+- Even more languages for Evil Twin templates
+- More WPA3 attacks: Downgrade, Dragondrain
+- ~~Sort APs by default by power to show which APs are closer~~
+- ~~WEF now works as a standalone script~~
+- ~~Disassociation is now supported alongside deauthentication~~
+- ~~Vendors are no longer parsed from a local file~~
+- ~~APs scanning has been improved, now APs with clients are marked in green colour~~
+- ~~Evil Twin now supports PMKID handshake to check captured passwords~~
+- ~~MAC randomization/spoofing improved~~
+- ~~Filters for WPS and WPA3 when scanning APs~~
+- ~~Most attacks were reworked and/or improved, new options are available~~
+- ~~Graphical session and windows were reworked~~
+- ~~Non-Graphical usage has been improved~~
+- ~~Automatic dependencies installation on main distros~~
+- ~~Deep testing on supported distros (Manjaro, Fedora, Parrot, Debian, etc)~~
+- ~~Requirements were updated. Some more were added although the should be installed on most distros~~
+- ~~WPA3 attack optimized~~
+- ~~Now certificate files needed for Enterprise Evil Twin are generated automatically~~
+- ~~More languages supported on Evil Twin templates (czech, danish and romanian)~~
+- ~~Now wordlists are not needed anymore as dependencies~~
+- ~~Better error handling for most scenarios~~
+- ~~Multiple bug fixes~~
 
 ## Changelog
 
 See [CHANGELOG.md](https://github.com/D3Ext/WEF/blob/main/CHANGELOG.md)
-
-## Credits
-
-Thanks to [ultrazar](https://github.com/ultrazar) and [ErKbModifier](https://github.com/ErKbModifier)
 
 ## References
 

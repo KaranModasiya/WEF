@@ -1,6 +1,6 @@
 # Scripts
 
-In this directory you can find a set of bash scripts with different purposes most of them are mine but other like `apd_launchpad.py` not. They aren't used by the main tool, anyway you can do whatever you want with them:
+In this directory you can find a set of bash scripts that I personally found interesting. They have different purposes, most of them are mine but other like `apd_launchpad.py` not.
 
 - ***deauth.sh***
 
