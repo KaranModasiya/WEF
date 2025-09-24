@@ -88,7 +88,7 @@ This are some of the most notable features:
 
 :ballot_box_with_check: Simple login template for Evil Twin attack (multiple languages supported)
 
-:ballot_box_with_check: Enable/disable monitor mode and view information about the network interface (frequencies, chipset, MAC...)
+:ballot_box_with_check: Toggle monitor mode and view information about the network interface (frequencies, chipset, etc.)
 
 :ballot_box_with_check: 2.4 GHz and 5 GHz supported
 
